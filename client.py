@@ -5,6 +5,12 @@ HOSTNAME = "ftp.uem.br"
  
 # Connect FTP Server
 ftp_server = ftplib.FTP(HOSTNAME)
+
+login_response = ftp_server.login()
+print(f"Response: {login_response}")
+
+
+print(ftp_server.pwd())
  
 # force UTF-8 encoding
 ftp_server.encoding = "utf-8"
